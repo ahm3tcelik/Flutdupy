@@ -1,0 +1,30 @@
+{
+    "androidAdsAppId": "ca-app-pub-3940256099942544~3347511713",
+    "androidAdsBannerId": "ca-app-pub-3940256099942544/6300978111",
+    "androidAdsSplashId": "ca-app-pub-3940256099942544/1033173712",
+    "androidAdsGecisId": "ca-app-pub-3940256099942544/1033173712",
+    "iosAdsAppId": "ca-app-pub-3940256099942544~1458002511",
+    "iosAdsBannerId": "ca-app-pub-3940256099942544/2934735716",
+    "iosAdsSplashId": "ca-app-pub-3940256099942544/4411468910",
+    "iosAdsGecisId": "ca-app-pub-3940256099942544/4411468910",
+    "testDeviceIds": [
+        "064B6145D0C8AFCEA467E97809481A58",
+        "45928B297383FC7B1BE6997B1D4E2B57"
+    ],
+    "colors": {
+        "primaryColor": "#673AB7FF",
+        "secondaryColor": "#546E7AFF",
+        "accentColor": "#EC407AFF",
+        "appTitle": "#FFFFFFFF",
+        "appOverlay": "#0000005C",
+        "shareButton": "#0288D1FF",
+        "playerButton": "#8E24AAFF",
+        "duration": "#FFFFFFFF",
+        "seekBarActive": "#FFFFFFFF",
+        "seekBarInactive": "#BDBDBDFF"
+    },
+    "texts": {
+        "appTitle": "Dinlenecek Sarkilar",
+        "subTitle": "Trend 2020"
+    }
+}

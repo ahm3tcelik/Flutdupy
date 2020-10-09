@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "145315364825",
+    "firebase_url": "https://cloudmusicplayer1.firebaseio.com",
+    "project_id": "cloudmusicplayer1",
+    "storage_bucket": "cloudmusicplayer1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:145315364825:android:4ea19abcce61562bbb63c8",
+        "android_client_info": {
+          "package_name": "com.sarkilar.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "145315364825-0038bsojaol65n9u19arbsjggrfmdpdb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjQWzlINiEfbYIO5gdPwS-mvsGIYwjgJQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "145315364825-0038bsojaol65n9u19arbsjggrfmdpdb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
