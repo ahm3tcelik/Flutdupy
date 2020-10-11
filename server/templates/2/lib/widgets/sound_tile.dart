@@ -5,9 +5,7 @@ import 'package:cloud_music_player/models/asset_sound.dart';
 import 'package:cloud_music_player/models/cloud_sound.dart';
 import 'package:cloud_music_player/models/sound.dart';
 import 'package:cloud_music_player/services/ad_service.dart';
-import 'package:esys_flutter_share/esys_flutter_share.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:global_configuration/global_configuration.dart';
 
 class SoundTile extends StatelessWidget {
@@ -45,24 +43,31 @@ class SoundTile extends StatelessWidget {
                       assetsAudioPlayer.pause();
                       intersAd.show();
                     } else {
+                      assetsAudioPlayer.playlistPlayAtIndex(index);
+                      /*
                       if(sound is AssetSound) {
                         assetsAudioPlayer.open(Audio((sound as AssetSound).path));
                       }
                       else {
                        await assetsAudioPlayer.open(Audio.network((sound as CloudSound).url));
                       }
+
+                       */
                     }
                   });
                 }
                 else {
                   adService.changeCounter(snapshot.data - 1);
-                  //assetsAudioPlayer.playlistPlayAtIndex(index);
+                  assetsAudioPlayer.playlistPlayAtIndex(index);
+                  /*
                   if(sound is AssetSound) {
                     assetsAudioPlayer.open(Audio((sound as AssetSound).path));
                   }
                   else {
                     await assetsAudioPlayer.open(Audio.network((sound as CloudSound).url));
                   }
+
+                   */
                 }
               },
               child: ListTile(

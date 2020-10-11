@@ -1,5 +1,8 @@
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:cloud_music_player/helpers/helper.dart';
+import 'package:cloud_music_player/models/asset_sound.dart';
+import 'package:cloud_music_player/models/cloud_sound.dart';
+import 'package:cloud_music_player/models/sound.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:global_configuration/global_configuration.dart';
@@ -113,7 +116,7 @@ class MusicPlayer extends StatelessWidget {
                       }
                     }),
                 FloatingActionButton(
-                  onPressed: () {
+                  onPressed: () async {
                     player.next(keepLoopMode: true);
                   },
                   backgroundColor:

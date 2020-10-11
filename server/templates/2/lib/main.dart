@@ -73,7 +73,7 @@ Future initializeApp(BuildContext context) async {
   }
 
   storageSounds.forEach((element) {
-    soundList.add(CloudSound(element['title'], element['url']));
+    soundList.add(CloudSound((element['title'] as String).replaceAll('.mp3', '') , element['url']));
   });
 
 }

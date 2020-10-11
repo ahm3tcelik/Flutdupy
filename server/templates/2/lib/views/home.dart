@@ -3,6 +3,8 @@ import 'dart:io';
 import 'package:admob_flutter/admob_flutter.dart';
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:cloud_music_player/helpers/helper.dart';
+import 'package:cloud_music_player/models/asset_sound.dart';
+import 'package:cloud_music_player/models/cloud_sound.dart';
 import 'package:cloud_music_player/models/sound.dart';
 import 'package:cloud_music_player/widgets/music_player.dart';
 import 'package:cloud_music_player/widgets/sound_tile.dart';
@@ -19,6 +21,7 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    buildPlayList();
     initIntersAd();
     return Scaffold(
       body: Stack(
@@ -140,15 +143,11 @@ class Home extends StatelessWidget {
                   children: [
                     TextField(
                       controller: soundName,
-                      decoration: InputDecoration(
-                        labelText: "Sound Name"
-                      ),
+                      decoration: InputDecoration(labelText: "Sound Name"),
                     ),
                     TextField(
                       controller: reason,
-                      decoration: InputDecoration(
-                        labelText: "Reason"
-                      ),
+                      decoration: InputDecoration(labelText: "Reason"),
                     ),
                   ],
                 ),
@@ -201,13 +200,29 @@ class Home extends StatelessWidget {
     );
     intersAd.load();
   }
+
   launchMailto(String body) async {
-    print('geldi ba bba');
     final mailtoLink = Mailto(
       to: [cfg.get('contact')['email']],
       subject: 'REPORTING CONTENT FOR ' + cfg.get('texts')['appTitle'],
       body: body,
     );
     await launch(mailtoLink.toString());
+  }
+
+  void buildPlayList() {
+    List<Audio> audios = List();
+    soundList.forEach((e) {
+      audios.add(e is AssetSound
+          ? Audio(e.path)
+          : Audio.network((e as CloudSound).url));
+    });
+    assetsAudioPlayer.open(
+      Playlist(audios: audios),
+      autoStart: false,
+      loopMode: LoopMode.playlist,
+      playInBackground: PlayInBackground.enabled,
+      playSpeed: 1.0
+    );
   }
 }
