@@ -3,7 +3,7 @@
 It allows you to without coding edit-duplicate mobile applications developed according to the template.
 
 - :white_check_mark: Web Back End: Node.js (Express.js)
-- :white_check_mark: Web Front End: Vue.js (vuetify)
+- :white_check_mark: Web Front End: Vue.js (vuex-axios-vuetify)
 - :white_check_mark: Mobile App : Flutter
 
 ### Features that can be changed via Flutdupy
